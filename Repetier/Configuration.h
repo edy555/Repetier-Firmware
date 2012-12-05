@@ -31,7 +31,11 @@
 // Gen6 1.4.1 an dlater = 71
 // Teensylu (at90usb) = 8 // requires Teensyduino
 // Printrboard (at90usb) = 9 // requires Teensyduino
+<<<<<<< HEAD
 #define MOTHERBOARD 71
+=======
+#define MOTHERBOARD 62
+>>>>>>> configured for sanguinololu and atmega1284p, Arduino-1.0.
 #include <avr/io.h>
 #include "pins.h"
 
@@ -54,11 +58,12 @@
 
 
 /** \brief Number of steps for a 1mm move in x direction. Overridden if EEPROM activated. */
-#define XAXIS_STEPS_PER_MM 40
+#define XAXIS_STEPS_PER_MM 80
 /** \brief Number of steps for a 1mm move in y direction  Overridden if EEPROM activated.*/
-#define YAXIS_STEPS_PER_MM 40
+#define YAXIS_STEPS_PER_MM 80
 /** \brief Number of steps for a 1mm move in z direction  Overridden if EEPROM activated.*/
-#define ZAXIS_STEPS_PER_MM 3360
+//#define ZAXIS_STEPS_PER_MM 3360
+#define ZAXIS_STEPS_PER_MM 64
 
 // ##########################################################################################
 // ##                           Extruder configuration                                     ##
@@ -497,7 +502,7 @@ on this endstop.
 
 // Inverting axis direction
 #define INVERT_X_DIR false
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
 
 //// ENDSTOP SETTINGS:
